@@ -52,9 +52,9 @@
             this.btnX1 = new System.Windows.Forms.Button();
             this.btnY0 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtXjjD1 = new System.Windows.Forms.TextBox();
             this.btnXjjX7 = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtXjjD0 = new System.Windows.Forms.TextBox();
             this.btnXjjX6 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.btnXjjX4 = new System.Windows.Forms.Button();
@@ -298,9 +298,9 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txtXjjD1);
             this.groupBox2.Controls.Add(this.btnXjjX7);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtXjjD0);
             this.groupBox2.Controls.Add(this.btnXjjX6);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.btnXjjX4);
@@ -324,18 +324,18 @@
             this.groupBox2.Controls.Add(this.btnXjjX0);
             this.groupBox2.Location = new System.Drawing.Point(396, 17);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(338, 426);
+            this.groupBox2.Size = new System.Drawing.Size(377, 421);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "group Delta, FX5U";
+            this.groupBox2.Text = "group Xinjie";
             // 
-            // textBox1
+            // txtXjjD1
             // 
-            this.textBox1.Location = new System.Drawing.Point(218, 398);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.TextChanged += new System.EventHandler(this.txtD1_TextChanged);
+            this.txtXjjD1.Location = new System.Drawing.Point(272, 286);
+            this.txtXjjD1.Name = "txtXjjD1";
+            this.txtXjjD1.Size = new System.Drawing.Size(100, 22);
+            this.txtXjjD1.TabIndex = 4;
+            this.txtXjjD1.TextChanged += new System.EventHandler(this.txtXjjD1_TextChanged);
             // 
             // btnXjjX7
             // 
@@ -346,13 +346,13 @@
             this.btnXjjX7.Text = "X7";
             this.btnXjjX7.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // txtXjjD0
             // 
-            this.textBox2.Location = new System.Drawing.Point(218, 359);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 22);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.TextChanged += new System.EventHandler(this.txtD0_TextChanged);
+            this.txtXjjD0.Location = new System.Drawing.Point(272, 247);
+            this.txtXjjD0.Name = "txtXjjD0";
+            this.txtXjjD0.Size = new System.Drawing.Size(100, 22);
+            this.txtXjjD0.TabIndex = 4;
+            this.txtXjjD0.TextChanged += new System.EventHandler(this.txtXjjD0_TextChanged);
             // 
             // btnXjjX6
             // 
@@ -366,7 +366,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(172, 401);
+            this.label3.Location = new System.Drawing.Point(226, 289);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(30, 17);
             this.label3.TabIndex = 2;
@@ -384,7 +384,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(172, 362);
+            this.label4.Location = new System.Drawing.Point(226, 250);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(30, 17);
             this.label4.TabIndex = 2;
@@ -555,7 +555,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(759, 455);
+            this.ClientSize = new System.Drawing.Size(785, 445);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmIO";
@@ -594,9 +594,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtD1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtXjjD1;
         private System.Windows.Forms.Button btnXjjX7;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtXjjD0;
         private System.Windows.Forms.Button btnXjjX6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnXjjX4;

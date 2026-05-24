@@ -32,11 +32,13 @@
             this.tmrUI = new System.Windows.Forms.Timer(this.components);
             this.frmIO = new System.Windows.Forms.Button();
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.lstLogs = new System.Windows.Forms.ListBox();
+            this.txtLogs = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // frmIO
             // 
-            this.frmIO.Location = new System.Drawing.Point(292, 42);
+            this.frmIO.Location = new System.Drawing.Point(180, 85);
             this.frmIO.Name = "frmIO";
             this.frmIO.Size = new System.Drawing.Size(127, 56);
             this.frmIO.TabIndex = 2;
@@ -49,11 +51,30 @@
             this.serialPort1.BaudRate = 38400;
             this.serialPort1.PortName = "COM3";
             // 
+            // lstLogs
+            // 
+            this.lstLogs.FormattingEnabled = true;
+            this.lstLogs.ItemHeight = 16;
+            this.lstLogs.Location = new System.Drawing.Point(397, 12);
+            this.lstLogs.Name = "lstLogs";
+            this.lstLogs.Size = new System.Drawing.Size(391, 196);
+            this.lstLogs.TabIndex = 4;
+            // 
+            // txtLogs
+            // 
+            this.txtLogs.Location = new System.Drawing.Point(397, 215);
+            this.txtLogs.Name = "txtLogs";
+            this.txtLogs.Size = new System.Drawing.Size(391, 223);
+            this.txtLogs.TabIndex = 5;
+            this.txtLogs.Text = "";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtLogs);
+            this.Controls.Add(this.lstLogs);
             this.Controls.Add(this.frmIO);
             this.IsMdiContainer = true;
             this.Name = "MainForm";
@@ -69,6 +90,8 @@
         private System.Windows.Forms.Timer tmrUI;
         private System.Windows.Forms.Button frmIO;
         private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.ListBox lstLogs;
+        private System.Windows.Forms.RichTextBox txtLogs;
     }
 }
 

@@ -50,6 +50,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AutoController.cs" />
+    <Compile Include="Logger\LogCategory.cs" />
+    <Compile Include="Logger\Logger.cs" />
+    <Compile Include="Logger\LogItem.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>

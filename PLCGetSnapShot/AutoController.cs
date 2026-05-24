@@ -31,16 +31,19 @@ namespace PLCGetSnapShot
                             if (input.X[0] == false)
                             {
                                 _step = Step.inner;
+                                Logger.Log(LogCategory.PLC, "I am in PLC Wait Trigger!");
+
                             }
                         break;
 
                     case Step.inner:
                         if (input.X != null && input.X.Length > 0)
                             _step = Step.WaitTrigger;
+                        Logger.Log(LogCategory.PLC, "I am in PLC Inner!");
                         break;
                 }
 
-                await Task.Delay(10);
+                await Task.Delay(100);
             }
         }
     }

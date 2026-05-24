@@ -167,5 +167,16 @@ namespace PLCGetSnapShot
 
         }
 
+        private void txtXjjD0_TextChanged(object sender, EventArgs e)
+        {
+            ushort.TryParse(txtD0.Text.ToString(), out ushort d0);
+            plcXinjie.WriteD(0x00, d0);
+        }
+
+        private void txtXjjD1_TextChanged(object sender, EventArgs e)
+        {
+            ushort.TryParse(txtD1.Text.ToString(), out ushort d1);
+            plcXinjie.WriteD(0x01, d1);
+        }
     }
 }
