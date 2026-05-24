@@ -1,0 +1,13 @@
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\bin\Debug\HalconVS1_20260518.exe.config
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\bin\Debug\HalconVS1_20260518.exe
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\bin\Debug\HalconVS1_20260518.pdb
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\bin\Debug\halcondotnet.dll
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\bin\Debug\halcondotnet.xml
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.csproj.AssemblyReference.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.Properties.Resources.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.csproj.GenerateResource.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.csproj.CoreCompileInputs.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.csproj.CopyComplete
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.exe
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.pdb
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.Form1.resources

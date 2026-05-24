@@ -1,0 +1,139 @@
+﻿2026-05-11 15:13:09.198 [System] Logger Started
+2026-05-11 15:13:10.780 [UI] Operator Click START
+2026-05-11 15:13:11.691 [Alarm] Retry Click!
+2026-05-11 15:13:13.423 [Alarm] Retry Click!
+2026-05-11 15:13:13.956 [PLC] Operator Click STOP
+2026-05-11 15:13:15.867 [PLC] Operator Click RESET
+2026-05-11 15:13:16.643 [PLC] Operator Click RESET
+2026-05-11 15:13:16.876 [PLC] Operator Click RESET
+2026-05-11 15:13:17.363 [PLC] Operator Click STOP
+2026-05-11 15:13:18.172 [UI] Operator Click START
+2026-05-11 15:13:18.948 [Alarm] Continue Click!
+2026-05-11 15:13:19.420 [PLC] Operator Click STOP
+2026-05-11 15:13:19.788 [PLC] Operator Click STOP
+2026-05-11 15:13:20.356 [PLC] Operator Click STOP
+2026-05-11 15:13:20.549 [PLC] Operator Click STOP
+2026-05-11 15:13:20.898 [UI] Operator Click START
+2026-05-11 15:13:20.901 [PLC] Waitting Sensor...
+2026-05-11 15:13:23.111 [Alarm] Continue Click!
+2026-05-11 15:13:24.112 [PLC] Waitting Sensor...
+2026-05-11 15:13:25.740 [Alarm] Retry Click!
+2026-05-11 15:29:16.182 [System] Logger Started
+2026-05-11 15:29:20.245 [UI] Operator Click START
+2026-05-11 15:29:21.506 [Alarm] Retry Click!
+2026-05-11 15:29:22.260 [PLC] Operator Click STOP
+2026-05-11 15:29:30.764 [PLC] Operator Click RESET
+2026-05-11 15:29:31.306 [PLC] Operator Click RESET
+2026-05-11 15:29:31.580 [PLC] Operator Click RESET
+2026-05-11 15:29:32.107 [PLC] Operator Click STOP
+2026-05-11 15:29:32.691 [UI] Operator Click START
+2026-05-11 15:29:33.631 [Alarm] Continue Click!
+2026-05-11 15:29:34.632 [PLC] Waitting Sensor...
+2026-05-11 15:29:45.641 [Alarm] Timeout!
+2026-05-11 15:31:48.740 [System] Logger Started
+2026-05-11 15:32:17.194 [System] Logger Started
+2026-05-11 15:32:40.182 [System] Logger Started
+2026-05-11 15:33:02.838 [System] Logger Started
+2026-05-11 15:33:08.782 [UI] Operator Click START
+2026-05-11 15:33:13.019 [PLC] Operator Click STOP
+2026-05-11 15:33:13.556 [PLC] Operator Click RESET
+2026-05-11 15:33:14.115 [PLC] Operator Click STOP
+2026-05-11 15:33:14.459 [UI] Operator Click START
+2026-05-11 15:33:15.622 [Alarm] Continue Click!
+2026-05-11 15:33:16.611 [PLC] Operator Click STOP
+2026-05-11 15:33:16.907 [PLC] Operator Click RESET
+2026-05-11 15:33:17.091 [PLC] Operator Click RESET
+2026-05-11 15:33:17.307 [PLC] Operator Click RESET
+2026-05-11 15:33:17.509 [PLC] Operator Click RESET
+2026-05-11 15:33:17.845 [PLC] Operator Click STOP
+2026-05-11 15:33:18.278 [UI] Operator Click START
+2026-05-11 15:33:18.281 [PLC] Waitting Sensor...
+2026-05-11 15:33:18.813 [Alarm] Timeout!
+2026-05-11 15:34:10.806 [System] Logger Started
+2026-05-11 15:38:28.916 [System] Logger Started
+2026-05-11 15:39:15.958 [System] Logger Started
+2026-05-11 15:39:30.213 [UI] Operator Click START
+2026-05-11 15:39:31.049 [Alarm] Retry Click!
+2026-05-11 15:39:31.540 [PLC] Operator Click STOP
+2026-05-11 15:39:32.348 [PLC] Operator Click RESET
+2026-05-11 15:40:18.267 [System] Logger Started
+2026-05-11 15:40:24.949 [UI] Operator Click START
+2026-05-11 15:40:28.548 [PLC] Operator Click STOP
+2026-05-11 15:40:29.051 [PLC] Operator Click RESET
+2026-05-11 15:40:30.420 [UI] Operator Click START
+2026-05-11 15:40:31.306 [Alarm] Retry Click!
+2026-05-11 15:40:31.876 [PLC] Operator Click STOP
+2026-05-11 15:40:32.739 [PLC] Operator Click RESET
+2026-05-11 15:40:34.966 [Alarm] Timeout!
+2026-05-11 15:41:21.840 [System] Logger Started
+2026-05-11 15:41:25.022 [UI] Operator Click START
+2026-05-11 15:41:26.008 [Alarm] Continue Click!
+2026-05-11 15:41:26.707 [PLC] Operator Click STOP
+2026-05-11 15:41:27.411 [PLC] Operator Click STOP
+2026-05-11 15:41:27.780 [PLC] Operator Click RESET
+2026-05-11 15:41:28.326 [PLC] Operator Click RESET
+2026-05-11 15:41:28.724 [UI] Operator Click START
+2026-05-11 15:41:28.727 [PLC] Waitting Sensor...
+2026-05-11 15:41:29.236 [PLC] Operator Click STOP
+2026-05-11 15:41:29.653 [PLC] Operator Click RESET
+2026-05-11 15:43:20.095 [System] Logger Started
+2026-05-11 15:43:20.964 [UI] Operator Click START
+2026-05-11 15:43:21.711 [Alarm] Retry Click!
+2026-05-11 15:43:28.932 [Alarm] Continue Click!
+2026-05-11 15:43:29.933 [PLC] Waitting Sensor...
+2026-05-11 15:43:32.246 [Alarm] Retry Click!
+2026-05-11 15:50:48.187 [System] Logger Started
+2026-05-11 15:50:49.180 [UI] Operator Click START
+2026-05-11 15:50:50.071 [Alarm] Retry Click!
+2026-05-11 15:50:51.589 [PLC] Operator Click STOP
+2026-05-11 15:50:52.275 [PLC] Operator Click STOP
+2026-05-11 15:52:50.077 [System] Logger Started
+2026-05-11 15:52:55.068 [PLC] Operator Click RESET
+2026-05-11 15:52:55.427 [PLC] Operator Click STOP
+2026-05-11 15:52:55.789 [UI] Operator Click START
+2026-05-11 15:52:58.759 [Alarm] Continue Click!
+2026-05-11 15:52:59.761 [PLC] Waitting Sensor...
+2026-05-11 15:53:01.814 [Alarm] Retry Click!
+2026-05-11 15:53:03.584 [Alarm] Continue Click!
+2026-05-11 15:53:04.586 [PLC] Waitting Sensor...
+2026-05-11 15:53:06.140 [Alarm] Retry Click!
+2026-05-11 15:53:17.157 [Alarm] Timeout!
+2026-05-11 15:54:10.883 [PLC] Operator Click STOP
+2026-05-11 15:54:11.908 [PLC] Operator Click RESET
+2026-05-11 15:54:12.421 [UI] Operator Click START
+2026-05-11 15:54:13.169 [Alarm] Retry Click!
+2026-05-11 15:54:24.170 [Alarm] Timeout!
+2026-05-11 18:52:22.122 [System] Logger Started
+2026-05-11 18:52:25.575 [UI] Operator Click START
+2026-05-11 18:52:26.756 [Alarm] Continue Click!
+2026-05-11 18:52:27.244 [PLC] Operator Click STOP
+2026-05-11 18:52:28.036 [PLC] Operator Click RESET
+2026-05-11 18:52:28.852 [PLC] Operator Click RESET
+2026-05-11 18:52:29.292 [PLC] Operator Click RESET
+2026-05-11 18:52:29.868 [UI] Operator Click START
+2026-05-11 18:52:29.868 [PLC] Waitting Sensor...
+2026-05-11 18:52:32.322 [Alarm] Continue Click!
+2026-05-11 18:52:33.052 [PLC] Operator Click STOP
+2026-05-11 18:52:34.236 [PLC] Operator Click RESET
+2026-05-11 18:52:34.908 [UI] Operator Click START
+2026-05-11 18:52:34.908 [PLC] Waitting Sensor...
+2026-05-11 18:52:36.832 [Alarm] Continue Click!
+2026-05-11 18:52:37.835 [PLC] Waitting Sensor...
+2026-05-11 18:52:39.543 [Alarm] Retry Click!
+2026-05-11 18:52:41.247 [Alarm] Retry Click!
+2026-05-11 18:52:43.052 [Alarm] Retry Click!
+2026-05-11 18:52:44.613 [Alarm] Retry Click!
+2026-05-11 18:52:46.104 [Alarm] Retry Click!
+2026-05-11 18:52:47.859 [Alarm] Retry Click!
+2026-05-11 18:52:49.398 [Alarm] Retry Click!
+2026-05-11 18:52:51.572 [Alarm] Retry Click!
+2026-05-11 18:52:53.326 [Alarm] Retry Click!
+2026-05-11 18:52:55.360 [Alarm] Retry Click!
+2026-05-11 18:52:57.062 [Alarm] Retry Click!
+2026-05-11 18:52:59.686 [Alarm] Retry Click!
+2026-05-11 18:53:04.947 [Alarm] Stop Click!
+2026-05-11 20:56:54.568 [System] Logger Started
+2026-05-11 20:57:04.422 [UI] Operator Click START
+2026-05-11 20:57:06.342 [PLC] Operator Click STOP
+2026-05-11 20:57:06.830 [PLC] Operator Click RESET
+2026-05-11 20:57:14.432 [Alarm] Timeout!

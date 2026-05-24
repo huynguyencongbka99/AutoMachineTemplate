@@ -1,0 +1,334 @@
+﻿Mình nhúng Halcon vào C# rồi. Bạn viết template cụ thể để mình calibration robot và ảnh nhé. Viết trước trường hợp camera Eye to Hand
+
+Dưới đây là template chuẩn để bạn làm:
+
+Eye-to-Hand Calibration
+(Camera cố định ngoài robot)
+
+trong:
+
+C#
+HALCON
+Robot bất kỳ
+
+Template này phù hợp với hệ của bạn:
+
+Robot chạy 9 điểm calibration
+Vision tìm mark/template
+Lưu Image ↔ Robot
+Tính HomMat2D
+Runtime chuyển Image → Robot
+1. Ý tưởng hệ thống
+
+Bạn sẽ có:
+
+Thành phần	Chức năng
+Robot	chạy tới điểm calibration
+Camera	chụp ảnh
+HALCON	tìm mark
+C#	lưu data
+HomMat2D	transform image → robot
+2. Khuyến nghị setup
+Camera
+Top view cố định
+Robot
+
+Jog trong vùng camera.
+
+Mark calibration
+
+Khuyên dùng:
+
+chấm tròn
+dấu cộng
+template cố định trên jig
+3. Class Calibration Point
+public class CalibPoint
+{
+    public double ImageX { get; set; }
+    public double ImageY { get; set; }
+
+    public double RobotX { get; set; }
+    public double RobotY { get; set; }
+}
+4. Biến toàn cục
+private List<CalibPoint> calibPoints =
+    new List<CalibPoint>();
+
+private HTuple homMat2D;
+5. Quy trình calibration
+STEP 1 — Robot chạy tới điểm
+
+Ví dụ:
+
+P1 → P2 → P3...
+STEP 2 — Camera chụp ảnh
+HImage image = new HImage();
+image.GrabImage(cameraHandle);
+STEP 3 — Find mark/template
+
+Ví dụ dùng Shape Model.
+
+6. Hàm Find Mark
+private bool FindMark(
+    HImage image,
+    out double row,
+    out double col)
+{
+    row = 0;
+    col = 0;
+
+    try
+    {
+        HTuple rows, cols, angles, scores;
+
+        HOperatorSet.FindShapeModel(
+            image,
+            modelID,
+            -0.39,
+            0.78,
+            0.5,
+            1,
+            0.5,
+            "least_squares",
+            0,
+            0.8,
+            out rows,
+            out cols,
+            out angles,
+            out scores);
+
+        if (scores.Length <= 0)
+            return false;
+
+        row = rows[0].D;
+        col = cols[0].D;
+
+        return true;
+    }
+    catch
+    {
+        return false;
+    }
+}
+7. STEP 4 — Lưu Image + Robot
+Chú ý
+
+HALCON:
+
+X = Column
+Y = Row
+Hàm Add Calibration Point
+public void AddCalibrationPoint(
+    double imageRow,
+    double imageCol,
+    double robotX,
+    double robotY)
+{
+    calibPoints.Add(new CalibPoint()
+    {
+        ImageX = imageCol,
+        ImageY = imageRow,
+
+        RobotX = robotX,
+        RobotY = robotY
+    });
+}
+8. STEP 5 — Tính HomMat2D
+
+Đây là phần quan trọng nhất.
+
+Hàm Calculate Calibration
+public bool CalculateCalibration()
+{
+    try
+    {
+        if (calibPoints.Count < 4)
+            return false;
+
+        HTuple imageX = new HTuple();
+        HTuple imageY = new HTuple();
+
+        HTuple robotX = new HTuple();
+        HTuple robotY = new HTuple();
+
+        foreach (var p in calibPoints)
+        {
+            imageX = imageX.TupleConcat(p.ImageX);
+            imageY = imageY.TupleConcat(p.ImageY);
+
+            robotX = robotX.TupleConcat(p.RobotX);
+            robotY = robotY.TupleConcat(p.RobotY);
+        }
+
+        HOperatorSet.VectorToHomMat2d(
+            imageX,
+            imageY,
+            robotX,
+            robotY,
+            out homMat2D);
+
+        return true;
+    }
+    catch
+    {
+        return false;
+    }
+}
+9. Ý nghĩa VectorToHomMat2d
+
+HALCON sẽ tự tính:
+
+translation
+rotation
+scale
+mirror
+
+từ toàn bộ calibration points.
+
+10. Runtime Transform
+
+Sau calibration.
+
+Bạn detect object mới.
+
+Hàm Convert Image → Robot
+public bool ImageToRobot(
+    double imageRow,
+    double imageCol,
+    out double robotX,
+    out double robotY)
+{
+    robotX = 0;
+    robotY = 0;
+
+    try
+    {
+        HTuple x, y;
+
+        HOperatorSet.AffineTransPoint2d(
+            homMat2D,
+            imageCol,
+            imageRow,
+            out x,
+            out y);
+
+        robotX = x.D;
+        robotY = y.D;
+
+        return true;
+    }
+    catch
+    {
+        return false;
+    }
+}
+11. Cực kỳ quan trọng
+HALCON dùng:
+HALCON	Meaning
+Row	Y
+Column	X
+Vì vậy:
+AffineTransPoint2d(
+    homMat2D,
+    imageCol,
+    imageRow,
+
+KHÔNG được đảo.
+
+12. Workflow đầy đủ
+Calibration Phase
+Robot move
+→ Camera grab
+→ Find mark
+→ Save image + robot
+→ Calculate HomMat2D
+Runtime Phase
+Find object
+→ ImageToRobot()
+→ Robot move
+13. Thêm rotation calibration
+
+Bạn nói có:
+
+9 translation
+3 rotation
+
+Rất tốt.
+
+Khi đó nên dùng:
+VectorAngleToRigid
+
+để mapping luôn theta.
+
+14. Template rotation chuẩn
+HOperatorSet.VectorAngleToRigid(
+    imageX,
+    imageY,
+    imageAngle,
+
+    robotX,
+    robotY,
+    robotAngle,
+
+    out homMat2D);
+15. Runtime có angle
+AffineTransPoint2d(...)
+
+cho X/Y.
+
+Theta
+robotTheta =
+    referenceTheta - detectedTheta;
+
+hoặc để calibration absorb luôn.
+
+16. Kinh nghiệm cực quan trọng
+Không dùng 3 điểm
+
+Hãy dùng:
+
+9~16 points
+17. Các điểm nên:
+phủ toàn FOV
+không thẳng hàng
+có center + corner
+18. Cách debug nhanh nhất
+
+Sau calibration:
+
+Test robot +X
+
+Object trên ảnh phải đi đúng predict.
+
+Test transform
+
+Pick 1 điểm bất kỳ:
+
+Image → Robot
+
+Robot phải move đúng vào mark.
+
+19. Sai lầm phổ biến
+Nhầm Row/Column
+
+Sai:
+
+X = Row
+Y = Column
+Tự đổi dấu lung tung
+
+Trong khi HALCON đã absorb vào matrix.
+
+20. Kết quả cuối cùng
+
+Bạn sẽ có:
+
+Image coordinate
+→ Robot coordinate
+
+chỉ bằng:
+
+AffineTransPoint2d()
+
+rất sạch và ổn định cho production machine vision.

@@ -1,0 +1,11 @@
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\bin\Debug\FormDialogue.exe.config
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\bin\Debug\FormDialogue.exe
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\bin\Debug\FormDialogue.pdb
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.csproj.AssemblyReference.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.FormDialogue.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.MainForm.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.Properties.Resources.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.csproj.GenerateResource.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.csproj.CoreCompileInputs.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.exe
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.pdb

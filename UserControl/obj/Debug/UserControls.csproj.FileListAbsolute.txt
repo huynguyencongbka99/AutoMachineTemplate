@@ -1,0 +1,4 @@
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\UserControl\obj\Debug\UserControls.csproj.AssemblyReference.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\UserControl\obj\Debug\UserControl.Properties.Resources.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\UserControl\obj\Debug\UserControls.csproj.GenerateResource.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\UserControl\obj\Debug\UserControls.csproj.CoreCompileInputs.cache

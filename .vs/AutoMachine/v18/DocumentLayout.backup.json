@@ -1,0 +1,132 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{EA392F62-0029-42DE-80A8-6BEB0C20F67C}|AutoMachine\\AutoMachine.csproj|c:\\users\\dell\\dropbox\\3.arcadyan\\cs\\automachine\\automachine\\presentation\\winforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{EA392F62-0029-42DE-80A8-6BEB0C20F67C}|AutoMachine\\AutoMachine.csproj|solutionrelative:automachine\\presentation\\winforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{EA392F62-0029-42DE-80A8-6BEB0C20F67C}|AutoMachine\\AutoMachine.csproj|C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\automachine\\presentation\\winforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{EA392F62-0029-42DE-80A8-6BEB0C20F67C}|AutoMachine\\AutoMachine.csproj|solutionrelative:automachine\\presentation\\winforms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\logcophanloaitheodatecategory\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|solutionrelative:logcophanloaitheodatecategory\\logger.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\logcophanloaitheodatecategory\\logitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|solutionrelative:logcophanloaitheodatecategory\\logitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\logcophanloaitheodatecategory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|solutionrelative:logcophanloaitheodatecategory\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\logcophanloaitheodatecategory\\logcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{94624DB8-6367-4FE0-BBA7-CCF898B4EF73}|LogCoPhanLoaiTheoDateCategory\\LogCoPhanLoaiTheoDateCategory.csproj|solutionrelative:logcophanloaitheodatecategory\\logcategory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9E870C1B-1F05-43B4-AA67-437C3B48A955}|PLCGetSnapShot\\PLCGetSnapShot.csproj|C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\plcgetsnapshot\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9E870C1B-1F05-43B4-AA67-437C3B48A955}|PLCGetSnapShot\\PLCGetSnapShot.csproj|solutionrelative:plcgetsnapshot\\autocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\AutoMachine\\Presentation\\Winforms\\MainForm.cs",
+              "RelativeDocumentMoniker": "AutoMachine\\Presentation\\Winforms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\AutoMachine\\Presentation\\Winforms\\MainForm.cs",
+              "RelativeToolTip": "AutoMachine\\Presentation\\Winforms\\MainForm.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAJUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T04:47:29.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\AutoMachine\\Presentation\\Winforms\\MainForm.cs",
+              "RelativeDocumentMoniker": "AutoMachine\\Presentation\\Winforms\\MainForm.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\AutoMachine\\Presentation\\Winforms\\MainForm.cs [Design]",
+              "RelativeToolTip": "AutoMachine\\Presentation\\Winforms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-13T04:47:27.87Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\Program.cs",
+              "RelativeDocumentMoniker": "LogCoPhanLoaiTheoDateCategory\\Program.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\Program.cs",
+              "RelativeToolTip": "LogCoPhanLoaiTheoDateCategory\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T11:17:33.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LogItem.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\LogItem.cs",
+              "RelativeDocumentMoniker": "LogCoPhanLoaiTheoDateCategory\\LogItem.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\LogItem.cs",
+              "RelativeToolTip": "LogCoPhanLoaiTheoDateCategory\\LogItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T11:17:18.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Logger.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\Logger.cs",
+              "RelativeDocumentMoniker": "LogCoPhanLoaiTheoDateCategory\\Logger.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\Logger.cs",
+              "RelativeToolTip": "LogCoPhanLoaiTheoDateCategory\\Logger.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAkwKwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T11:17:01.742Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LogCategory.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\LogCategory.cs",
+              "RelativeDocumentMoniker": "LogCoPhanLoaiTheoDateCategory\\LogCategory.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\LogCoPhanLoaiTheoDateCategory\\LogCategory.cs",
+              "RelativeToolTip": "LogCoPhanLoaiTheoDateCategory\\LogCategory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-12T11:16:48.413Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AutoController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\PLCGetSnapShot\\AutoController.cs",
+              "RelativeDocumentMoniker": "PLCGetSnapShot\\AutoController.cs",
+              "ToolTip": "C:\\Users\\DELL\\Dropbox\\3.Arcadyan\\Cs\\AutoMachine\\PLCGetSnapShot\\AutoController.cs",
+              "RelativeToolTip": "PLCGetSnapShot\\AutoController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwB4AAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-11T03:45:20.232Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+﻿using System;
+using System.Net;
+using System.Net.Sockets;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+
+// Luôn nhớ một khẩu khuyết là
+// Nếu Auto Thread muốn biết Thông tin về Robot Service thì hãy đăng ký một event trong Robot Service
+// Mỗi lần thông tin gì mà Robot Service update mới thì Auto Service đều biết hết _robot.MessageReceived += OnRobotMessage;
+
+
+namespace Machine.Services
+{
+    public class RobotService
+    {
+        private TcpListener _listener;
+
+        private TcpClient _client;
+
+        private CancellationTokenSource _cts;
+
+        private readonly object _sendLock = new();
+
+        public bool IsConnected =>
+            _client != null &&
+            _client.Connected;
+
+        // event
+        public event Action Connected;
+
+        public event Action Disconnected;
+
+        public event Action<string> MessageReceived;
+
+        public async Task StartAsync(int port)
+        {
+            _cts = new CancellationTokenSource();
+
+            _listener = new TcpListener(
+                IPAddress.Any,
+                port);
+
+            _listener.Start();
+
+            Console.WriteLine(
+                $"Robot Server Start : {port}");
+
+            _ = Task.Run(() =>
+                AcceptLoop(_cts.Token));
+
+            await Task.CompletedTask;
+        }
+
+        private async Task AcceptLoop(
+            CancellationToken token)
+        {
+            while (!token.IsCancellationRequested)
+            {
+                try
+                {
+                    Console.WriteLine(
+                        "Waiting Robot Connect...");
+
+                    TcpClient client =
+                        await _listener
+                            .AcceptTcpClientAsync();
+
+                    Console.WriteLine(
+                        "Robot Connected");
+
+                    CloseClient();
+
+                    _client = client;
+
+                    Connected?.Invoke();
+
+                    _ = Task.Run(() =>
+                        ReceiveLoop(client, token));
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(
+                        $"Accept Error : {ex.Message}");
+                }
+
+                await Task.Delay(500);
+            }
+        }
+
+        private async Task ReceiveLoop(
+            TcpClient client,
+            CancellationToken token)
+        {
+            try
+            {
+                NetworkStream stream =
+                    client.GetStream();
+
+                byte[] buffer =
+                    new byte[1024];
+
+                while (!token.IsCancellationRequested)
+                {
+                    int len =
+                        await stream.ReadAsync(
+                            buffer,
+                            0,
+                            buffer.Length,
+                            token);
+
+                    // disconnected
+                    if (len == 0)
+                    {
+                        Console.WriteLine(
+                            "Robot Disconnect");
+
+                        break;
+                    }
+
+                    string msg =
+                        Encoding.UTF8.GetString(
+                            buffer,
+                            0,
+                            len);
+
+                    msg = msg.Trim();
+
+                    Console.WriteLine(
+                        $"Receive : {msg}");
+
+                    MessageReceived?.Invoke(msg);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(
+                    $"Receive Error : {ex.Message}");
+            }
+            finally
+            {
+                if (_client == client)
+                {
+                    CloseClient();
+
+                    Disconnected?.Invoke();
+                }
+            }
+        }
+
+        public async Task SendAsync(string msg)
+        {
+            try
+            {
+                if (!IsConnected)
+                {
+                    Console.WriteLine(
+                        "Robot Not Connected");
+
+                    return;
+                }
+
+                byte[] data =
+                    Encoding.UTF8.GetBytes(msg);
+
+                lock (_sendLock)
+                {
+                    _client
+                        .GetStream()
+                        .Write(data, 0, data.Length);
+                }
+
+                Console.WriteLine(
+                    $"Send : {msg}");
+
+                await Task.CompletedTask;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(
+                    $"Send Error : {ex.Message}");
+
+                CloseClient();
+            }
+        }
+
+        private void CloseClient()
+        {
+            try
+            {
+                _client?.Close();
+            }
+            catch
+            {
+            }
+
+            _client = null;
+        }
+
+        public void Stop()
+        {
+            try
+            {
+                _cts?.Cancel();
+
+                CloseClient();
+
+                _listener?.Stop();
+            }
+            catch
+            {
+            }
+        }
+    }
+}
+
+
+public class ControlAutoThread
+{
+    private RobotService _robot;
+
+    private bool _robotReady;
+
+    public async Task StartAsync()
+    {
+        _robot = new RobotService();
+
+        _robot.Connected += OnRobotConnected;
+
+        _robot.Disconnected += OnRobotDisconnected;
+
+        _robot.MessageReceived += OnRobotMessage;
+
+        await _robot.StartAsync(5000);
+
+        _ = Task.Run(AutoLoop);
+    }
+
+    private void OnRobotConnected()
+    {
+        Console.WriteLine("Robot Online");
+    }
+
+    private void OnRobotDisconnected()
+    {
+        Console.WriteLine("Robot Offline");
+    }
+
+    private void OnRobotMessage(string msg)
+    {
+        switch (msg)
+        {
+            case "READY":
+
+                _robotReady = true;
+
+                break;
+
+            case "PICK_DONE":
+
+                Console.WriteLine("Pick Done");
+
+                break;
+        }
+    }
+
+    private async Task AutoLoop()
+    {
+        while (true)
+        {
+            if (_robotReady)
+            {
+                _robotReady = false;
+
+                // vision giả lập
+                double x = 100.5;
+                double y = 200.3;
+
+                await _robot.SendAsync(
+                    $"PICK,{x},{y}");
+            }
+
+            await Task.Delay(10);
+        }
+    }
+}
+
+
+public partial class MainForm : Form
+{
+    private RobotService _robot;
+
+    private PlcService _plc;
+
+    private ControlAutoThread _auto;
+
+    public MainForm()
+    {
+        InitializeComponent();
+    }
+
+    private async void MainForm_Load(
+        object sender,
+        EventArgs e)
+    {
+        _robot = new RobotService();
+
+        _plc = new PlcService();
+
+        await _robot.StartAsync(5000);
+
+        await _plc.StartAsync();
+
+        _auto = new ControlAutoThread(
+            _robot,
+            _plc);
+
+        _auto.Start();
+    }
+}

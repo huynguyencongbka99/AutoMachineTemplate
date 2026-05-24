@@ -1,0 +1,13 @@
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\bin\Release\HalconVS2_202605120Calibration.exe.config
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\bin\Release\HalconVS2_202605120Calibration.exe
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\bin\Release\HalconVS2_202605120Calibration.pdb
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\bin\Release\halcondotnet.dll
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\bin\Release\halcondotnet.xml
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.csproj.AssemblyReference.cache
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.Form1.resources
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.Properties.Resources.resources
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.csproj.GenerateResource.cache
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.csproj.CopyComplete
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.exe
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Release\HalconVS2_202605120Calibration.pdb

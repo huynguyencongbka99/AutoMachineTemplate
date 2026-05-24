@@ -1,0 +1,11 @@
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\bin\Debug\LearnUserControl.exe.config
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\bin\Debug\LearnUserControl.exe
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\bin\Debug\LearnUserControl.pdb
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.Properties.Resources.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.UserControls.ControlDangNhap.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.csproj.GenerateResource.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.csproj.CoreCompileInputs.cache
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.exe
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.pdb
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.Form1.resources
+C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\LearnUserControl\obj\Debug\LearnUserControl.csproj.AssemblyReference.cache
