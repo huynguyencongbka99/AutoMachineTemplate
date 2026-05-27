@@ -79,6 +79,12 @@ namespace PLCGetSnapShot
                     bool[] y = ReadY(1280, 4);
 
                     bool[] m = ReadM(2048, 4);
+
+                    //bool[] x = ReadX(0, 8);
+
+                    //bool[] y = ReadY(0, 4);
+
+                    //bool[] m = ReadM(8192, 4);
                     // 🔒 ghi dữ liệu (critical section NGẮN)
                     lock (_lock)
                     {
@@ -178,12 +184,12 @@ namespace PLCGetSnapShot
                 {
                     //đọc PLC thật
 
+                    bool[] x = ReadX(0, 8);
 
-                    bool[] x = ReadX(1024, 8);
+                    bool[] y = ReadY(0, 4);
 
-                    bool[] y = ReadY(1280, 4);
+                    bool[] m = ReadM(8192, 4);
 
-                    bool[] m = ReadM(2048, 4);
                     // 🔒 ghi dữ liệu (critical section NGẮN)
                     lock (_lock)
                     {
@@ -271,8 +277,13 @@ namespace PLCGetSnapShot
 
         public void OpenSerialPort()
         {
-            if (!serialPort.IsOpen)
-                serialPort.Open();
+            try
+            {
+                if (!serialPort.IsOpen)
+                    serialPort.Open();
+            }
+            catch { }
+
         }
 
         public void ModbusConfig()

@@ -6,7 +6,6 @@ C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetS
 C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.CoreCompileInputs.cache
 C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.exe
 C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.pdb
-C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.Form1.resources
 C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.frmIO.resources
 C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\PLCGetSnapShot.exe.config
 C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\PLCGetSnapShot.exe
@@ -23,3 +22,7 @@ C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\N
 C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.AssemblyReference.cache
 C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.CopyComplete
 C:\Users\TonyNguyen\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.MainForm.resources
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\NModbus4.dll
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\NModbus4.xml
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.MainForm.resources
+C:\Users\DELL\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.CopyComplete

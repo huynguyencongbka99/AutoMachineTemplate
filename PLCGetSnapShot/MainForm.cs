@@ -26,7 +26,8 @@ namespace PLCGetSnapShot
         private async void Form1_Load(object sender, EventArgs e)
         {
             
-            _iplcService = new PlcServiceDelta("192.168.0.11", 502);
+            //_iplcService = new PlcServiceDelta("192.168.0.11", 502);
+            _iplcService = new PlcServiceFX5U("192.168.0.10", 502);
             _iplcService.Start();
 
             serviceXinjie = new PLCServiceXinjie(serialPort1);
@@ -57,7 +58,6 @@ namespace PLCGetSnapShot
                 
                 return;
             }
-
             AddLogToUI(item);
         }
 
