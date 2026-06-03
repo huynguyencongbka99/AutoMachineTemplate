@@ -12,7 +12,8 @@ namespace AutoMachine.Core.Controllers
         private readonly UIService _ui;
         //private Thread _thread;
         private bool _running;
-        private int _step = 0;
+        //private int _step = 0;
+        private MachineState _step = MachineState.idle;
         //private Task _task;
 
         public AutoController(UIService ui)
@@ -40,13 +41,13 @@ namespace AutoMachine.Core.Controllers
             {
                 switch (_step)
                 {
-                    case 0:
+                    case MachineState.idle:
                         var action = await _ui.ShowErrorAsync("Scan barcode failed!", 10000);
 
                         switch (action)
                         {
                             case MachineAction.Continue:
-                                _step = 1;
+                                _step = MachineState.state1;
                                 Logger.Log(LogCategory.Alarm, "Continue Click!");
                                 break;
 
@@ -66,14 +67,14 @@ namespace AutoMachine.Core.Controllers
                         }
                         break;
 
-                    case 1:
+                    case MachineState.state1:
                         // normal run
                         _step = 0;
                         Logger.Log(LogCategory.PLC,"Waitting Sensor...");
                         break;
                 }
 
-                Thread.Sleep(1000);
+                Thread.Sleep(20);
             }
         }
     }

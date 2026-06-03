@@ -37,46 +37,51 @@ namespace LearnUserControl.UserControls
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(18, 27);
+            this.button1.Location = new System.Drawing.Point(14, 20);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(96, 36);
+            this.button1.Size = new System.Drawing.Size(72, 27);
             this.button1.TabIndex = 0;
             this.button1.Text = "button1";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(18, 85);
+            this.button2.Location = new System.Drawing.Point(14, 64);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(96, 36);
+            this.button2.Size = new System.Drawing.Size(72, 27);
             this.button2.TabIndex = 0;
             this.button2.Text = "button1";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(177, 41);
+            this.textBox1.Location = new System.Drawing.Point(133, 31);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(192, 22);
+            this.textBox1.Size = new System.Drawing.Size(145, 21);
             this.textBox1.TabIndex = 1;
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(177, 99);
+            this.maskedTextBox1.Location = new System.Drawing.Point(133, 74);
+            this.maskedTextBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(192, 22);
+            this.maskedTextBox1.Size = new System.Drawing.Size(145, 21);
             this.maskedTextBox1.TabIndex = 2;
             // 
             // ControlDangNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "ControlDangNhap";
-            this.Size = new System.Drawing.Size(469, 180);
+            this.Size = new System.Drawing.Size(295, 124);
             this.ResumeLayout(false);
             this.PerformLayout();
 

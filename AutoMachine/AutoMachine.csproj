@@ -52,6 +52,7 @@
     <Compile Include="Application\Services\UIService.cs" />
     <Compile Include="Core\Controllers\AutoController.cs" />
     <Compile Include="Core\Enums\MachineAction.cs" />
+    <Compile Include="Core\Enums\MachineState.cs" />
     <Compile Include="Infrastructure\PLC\PLCMock.cs" />
     <Compile Include="Infrastructure\PLC\PLCSnapShot.cs" />
     <Compile Include="Presentation\Winforms\ErrorForm.cs">
