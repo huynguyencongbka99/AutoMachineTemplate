@@ -15,6 +15,7 @@ namespace PLCGetSnapShot
         AutoController _controller;
         IPlcService _iplcService;
         PLCServiceXinjie serviceXinjie;
+        ABBSocket _rbAbb;
         frmIO _frmIO;
         private readonly Queue<LogItem> _runtimeLogs = new Queue<LogItem>();
         public MainForm()
@@ -26,25 +27,38 @@ namespace PLCGetSnapShot
         private async void Form1_Load(object sender, EventArgs e)
         {
             
-            //_iplcService = new PlcServiceDelta("192.168.0.11", 502);
-            _iplcService = new PlcServiceFX5U("192.168.0.10", 502);
+            _iplcService = new PlcServiceDelta("192.168.0.11", 502);
+            
+            //_iplcService = new PlcServiceFX5U("192.168.0.10", 502);
             _iplcService.Start();
 
+            
             serviceXinjie = new PLCServiceXinjie(serialPort1);
             serviceXinjie.Start();
-
             _frmIO = new frmIO(_iplcService, serviceXinjie);
+            //robot
+
+            _rbAbb = new ABBSocket();
+            // await _rbAbb.StartAsync("192.168.0.125", 5002);
+
+
             
-            _controller = new AutoController(_iplcService);
+            _controller = new AutoController(_iplcService, _rbAbb);
+            _controller.ShowError += ShowFormError;
+
             try
             {
                 await _controller.RunAsync();
+                
             }
             catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-            
+
+           
+
+
         }
 
         private void Logger_OnLogReceived(LogItem item)
@@ -99,6 +113,23 @@ namespace PLCGetSnapShot
                 _frmIO.Show();
                 _frmIO.BringToFront();
             }
+        }
+
+        private string ShowFormError(string s)
+        {
+            string str = "1111";
+            Invoke(new Action(() =>
+            {
+                ErrorForm frm = new ErrorForm(s);
+                frm.ShowDialog();
+                if (frm.DialogResult == DialogResult.OK)
+                    str = "OK";
+                if (frm.DialogResult == DialogResult.Cancel)
+                    str = "Cacel";
+                if (frm.DialogResult == DialogResult.Retry)
+                    str = "Retry";
+            }));
+            return str;
         }
     }
 }

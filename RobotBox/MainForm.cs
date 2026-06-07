@@ -14,8 +14,8 @@ namespace RobotBox
     {
         public static string user = "user";
         UserControl userform = new UserControl( user);
-        
-        ABBSocket _abbSocket = new ABBSocket();
+
+        ABBSocket robot = new ABBSocket();
         public MainForm()
         {
             InitializeComponent();
@@ -23,24 +23,61 @@ namespace RobotBox
         }
 
 
-
+        /// <summary>
+        /// Điểm cần chú ý: giao thức TCP không đảm bảo mỗi lần ReadAsync() nhận đúng 1 message. 
+        /// Trong thực tế ABB thường nên gửi ký tự kết thúc (\n) cho mỗi bản tin (RSP:ACK\n, EVT:DONE\n). Khi đó ReceiveLoop cần tách theo dòng (StreamReader.ReadLineAsync) để tránh trường hợp nhận "RSP:ACKEVT:DONE" trong cùng một gói tin. 
+        /// Đây là phần mình sẽ bổ sung nếu bạn muốn xây dựng giao thức sản xuất thực tế.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private async void MainForm_Load(object sender, EventArgs e)
         {
-            //await _abbSocket.StartAsync("192.168.192.1", 5000);
-            await _abbSocket.StartAsync("localhost", 5000);
+            ABBSocket robot = new ABBSocket();
 
         }
 
+        /*
+                     * robot.RobotDone += () =>
+            {
+                Console.WriteLine("Robot Done");
+            };
 
+            robot.RobotBusy += () =>
+            {
+                Console.WriteLine("Robot Busy");
+            };
 
-        private void btnSend_Click(object sender, EventArgs e)
+            robot.RobotError += () =>
+            {
+                Console.WriteLine("Robot Error");
+            };
+
+            robot.ConnectionChanged += connected =>
+            {
+                Console.WriteLine(
+                    $"Connected = {connected}");
+            };
+
+            --> SocketSend "RSP:ACK"
+            (thực hiện gắp)
+            --> SocketSend "EVT:BUSY"
+
+            (chạy xong)
+
+            --> SocketSend "EVT:DONE"
+            */
+
+        private async void btnSend_Click(object sender, EventArgs e)
         {
-            var line = _abbSocket.SendCommand("Send to Server\n");
-            rtb上位机和机械手.AppendText(line + Environment.NewLine);
-            // scroll xuống cuối
-            rtb上位机和机械手.SelectionStart = rtb上位机和机械手.Text.Length;
-            rtb上位机和机械手.ScrollToCaret();
+            bool ok =
+                await robot.SendCommandAsync(
+                    "CMD:MOVE_PICK");
+
+            if (!ok)
+            {
+                Console.WriteLine("ACK Timeout");
+            }
         }
 
         private void btnAuto_Click(object sender, EventArgs e)

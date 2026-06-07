@@ -8,9 +8,10 @@ namespace PLCGetSnapShot
 {
     public enum Step
     {
-        WaitTrigger,
-        inner,
-        Capture
+        _0_WaitTrigger,
+        _5_inner,
+        _10_Capture,
+        _15_TinhToan
 
     }
 }

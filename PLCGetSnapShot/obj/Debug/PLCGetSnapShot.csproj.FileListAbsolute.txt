@@ -54,3 +54,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGet
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.CopyComplete
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.pdb
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.ErrorForm.resources

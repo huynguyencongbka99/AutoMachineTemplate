@@ -30,3 +30,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDial
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.csproj.CoreCompileInputs.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.pdb
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\FormDialogue\obj\Debug\FormDialogue.csproj.AssemblyReference.cache

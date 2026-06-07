@@ -38,7 +38,7 @@
             // 
             // frmIO
             // 
-            this.frmIO.Location = new System.Drawing.Point(180, 85);
+            this.frmIO.Location = new System.Drawing.Point(264, 12);
             this.frmIO.Name = "frmIO";
             this.frmIO.Size = new System.Drawing.Size(127, 56);
             this.frmIO.TabIndex = 2;
@@ -49,7 +49,7 @@
             // serialPort1
             // 
             this.serialPort1.BaudRate = 38400;
-            this.serialPort1.PortName = "COM3";
+            this.serialPort1.PortName = "COM5";
             // 
             // lstLogs
             // 
@@ -76,7 +76,6 @@
             this.Controls.Add(this.txtLogs);
             this.Controls.Add(this.lstLogs);
             this.Controls.Add(this.frmIO);
-            this.IsMdiContainer = true;
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

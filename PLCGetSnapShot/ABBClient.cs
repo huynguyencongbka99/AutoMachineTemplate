@@ -4,11 +4,15 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace RobotBox
+namespace PLCGetSnapShot
 {
     #region ABB Socket
     public class ABBSocket
     {
+        private readonly object _snapshotLock = new object();
+
+        private RobotSnapshot _snapshot =new RobotSnapshot();
+
         #region Fields
 
         private string _ip;
@@ -21,7 +25,7 @@ namespace RobotBox
 
         private CancellationTokenSource _cts;
 
-        private TaskCompletionSource<bool> _ackWaiter;
+        //private TaskCompletionSource<bool> _ackWaiter;
 
         private bool _ackReceived = false;
 
@@ -70,6 +74,7 @@ namespace RobotBox
             await ConnectAsync();
 
             _ = Task.Run(() => ConnectionMonitorLoop(_cts.Token));
+            _ = Task.Run(() => RegisterPollingLoop(_cts.Token));
         }
 
         #endregion
@@ -324,9 +329,81 @@ namespace RobotBox
         }
 
         #endregion
+
+
+        #region SnapShot ABB Logic
+        public RobotSnapshot GetSnapshot()
+        {
+            lock (_snapshotLock)
+            {
+                return new RobotSnapshot
+                {
+                    TimeStamp = _snapshot.TimeStamp,
+                    IsConnected = _snapshot.IsConnected,
+                    State = _snapshot.State,
+
+                    PartCount = _snapshot.PartCount,
+                    AlarmCode = _snapshot.AlarmCode,
+                    ProgramStep = _snapshot.ProgramStep,
+
+                    PosX = _snapshot.PosX,
+                    PosY = _snapshot.PosY,
+                    PosZ = _snapshot.PosZ
+                };
+            }
+        }
+
+        private async Task RegisterPollingLoop(
+    CancellationToken token)
+        {
+            while (!token.IsCancellationRequested)
+            {
+                if (IsConnected)
+                {
+                    try
+                    {
+                        SendRaw("GET_STATUS\n");
+                    }
+                    catch
+                    {
+                    }
+                }
+
+                await Task.Delay(200, token);
+            }
+        }
+
+        private void ParseStatus(string msg)
+        {
+            string[] arr = msg.Split(',');
+
+            lock (_snapshotLock)
+            {
+                _snapshot.TimeStamp = DateTime.Now;
+
+                _snapshot.PartCount =
+                    int.Parse(arr[1]);
+
+                _snapshot.AlarmCode =
+                    int.Parse(arr[2]);
+
+                _snapshot.ProgramStep =
+                    int.Parse(arr[3]);
+
+                _snapshot.PosX =
+                    double.Parse(arr[4]);
+
+                _snapshot.PosY =
+                    double.Parse(arr[5]);
+
+                _snapshot.PosZ =
+                    double.Parse(arr[6]);
+            }
+        }
+        #endregion
     }
     #endregion
-    #region Enum Robot state
+    #region Robot Enumstate
     public enum RobotState
     {
         Offline,
@@ -335,9 +412,7 @@ namespace RobotBox
         Error
     }
     #endregion
-
-
-    #region Robot Snapshot
+    #region RobotSnapShot
     public class RobotSnapshot
     {
         public DateTime TimeStamp { get; set; }
@@ -357,7 +432,9 @@ namespace RobotBox
         public double PosY { get; set; }
 
         public double PosZ { get; set; }
-    }
 
+
+
+    }
     #endregion
 }

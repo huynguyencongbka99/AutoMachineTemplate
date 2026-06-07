@@ -18,3 +18,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\RobotBox\obj\Debug\RobotBox.Pro
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\RobotBox\obj\Debug\RobotBox.UserControl.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\RobotBox\obj\Debug\RobotBox.csproj.GenerateResource.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\RobotBox\obj\Debug\RobotBox.csproj.CoreCompileInputs.cache
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\RobotBox\obj\Debug\RobotBox.csproj.AssemblyReference.cache

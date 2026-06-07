@@ -57,13 +57,13 @@ namespace TaoFileINI_RECIPE
             this.groupBox1.Controls.Add(this.txtExposure);
             this.groupBox1.Controls.Add(this.cbRecipe);
             this.groupBox1.Location = new System.Drawing.Point(687, 16);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox1.Size = new System.Drawing.Size(364, 183);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Model Follow Combobox";
             // 
             // label2
             // 
@@ -98,7 +98,7 @@ namespace TaoFileINI_RECIPE
             // txtScore
             // 
             this.txtScore.Location = new System.Drawing.Point(125, 127);
-            this.txtScore.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtScore.Margin = new System.Windows.Forms.Padding(4);
             this.txtScore.Name = "txtScore";
             this.txtScore.Size = new System.Drawing.Size(176, 22);
             this.txtScore.TabIndex = 4;
@@ -106,7 +106,7 @@ namespace TaoFileINI_RECIPE
             // txtExposure
             // 
             this.txtExposure.Location = new System.Drawing.Point(125, 75);
-            this.txtExposure.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtExposure.Margin = new System.Windows.Forms.Padding(4);
             this.txtExposure.Name = "txtExposure";
             this.txtExposure.Size = new System.Drawing.Size(176, 22);
             this.txtExposure.TabIndex = 5;
@@ -114,12 +114,8 @@ namespace TaoFileINI_RECIPE
             // cbRecipe
             // 
             this.cbRecipe.FormattingEnabled = true;
-            this.cbRecipe.Items.AddRange(new object[] {
-            "ProductA",
-            "ProductB",
-            "ProductC"});
             this.cbRecipe.Location = new System.Drawing.Point(125, 27);
-            this.cbRecipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRecipe.Margin = new System.Windows.Forms.Padding(4);
             this.cbRecipe.Name = "cbRecipe";
             this.cbRecipe.Size = new System.Drawing.Size(176, 24);
             this.cbRecipe.TabIndex = 3;
@@ -134,18 +130,18 @@ namespace TaoFileINI_RECIPE
             this.groupBox2.Controls.Add(this.lblModel);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Location = new System.Drawing.Point(687, 233);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
             this.groupBox2.Size = new System.Drawing.Size(364, 351);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "groupBox2";
+            this.groupBox2.Text = "Model Follow ListBox";
             // 
             // btnAddRecipe
             // 
             this.btnAddRecipe.Location = new System.Drawing.Point(244, 80);
-            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAddRecipe.Margin = new System.Windows.Forms.Padding(4);
             this.btnAddRecipe.Name = "btnAddRecipe";
             this.btnAddRecipe.Size = new System.Drawing.Size(112, 31);
             this.btnAddRecipe.TabIndex = 4;
@@ -158,7 +154,7 @@ namespace TaoFileINI_RECIPE
             this.listBoxRecipe.FormattingEnabled = true;
             this.listBoxRecipe.ItemHeight = 16;
             this.listBoxRecipe.Location = new System.Drawing.Point(8, 135);
-            this.listBoxRecipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.listBoxRecipe.Margin = new System.Windows.Forms.Padding(4);
             this.listBoxRecipe.Name = "listBoxRecipe";
             this.listBoxRecipe.Size = new System.Drawing.Size(347, 196);
             this.listBoxRecipe.TabIndex = 3;
@@ -166,7 +162,7 @@ namespace TaoFileINI_RECIPE
             // btnSelectRecipe
             // 
             this.btnSelectRecipe.Location = new System.Drawing.Point(244, 27);
-            this.btnSelectRecipe.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnSelectRecipe.Margin = new System.Windows.Forms.Padding(4);
             this.btnSelectRecipe.Name = "btnSelectRecipe";
             this.btnSelectRecipe.Size = new System.Drawing.Size(112, 31);
             this.btnSelectRecipe.TabIndex = 2;
@@ -177,7 +173,7 @@ namespace TaoFileINI_RECIPE
             // txtRecipeName
             // 
             this.txtRecipeName.Location = new System.Drawing.Point(11, 83);
-            this.txtRecipeName.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRecipeName.Margin = new System.Windows.Forms.Padding(4);
             this.txtRecipeName.Name = "txtRecipeName";
             this.txtRecipeName.Size = new System.Drawing.Size(193, 22);
             this.txtRecipeName.TabIndex = 4;
@@ -220,7 +216,7 @@ namespace TaoFileINI_RECIPE
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);

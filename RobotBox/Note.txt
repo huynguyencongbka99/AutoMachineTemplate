@@ -1,0 +1,164 @@
+﻿Nếu theo mô hình ABB ↔ C# thì luồng xử lý thường như sau:
+
+PC/HMI
+   ↓
+Send Command
+   ↓
+Robot nhận lệnh
+   ↓
+ACK
+   ↓
+Robot thực thi
+   ↓
+DONE hoặc ERROR
+
+Ví dụ lệnh Home:
+
+PC  ---------- CMD:HOME ---------> Robot
+PC  <--------- RSP:ACK ---------- Robot
+
+Robot chạy về Home
+
+PC  <--------- EVT:DONE --------- Robot
+
+
+Phía C#
+
+Ví dụ người dùng bấm nút Home:
+
+private async void btnHome_Click(object sender, EventArgs e)
+{
+    bool ack = await robot.SendCommandAsync("CMD:HOME\n");
+
+    if (!ack)
+    {
+        MessageBox.Show("Robot không phản hồi");
+        return;
+    }
+
+    Console.WriteLine("Robot đã nhận lệnh");
+}
+
+Lúc này:
+
+SendCommandAsync()
+
+chỉ có nhiệm vụ:
+
+Gửi lệnh
+↓
+Đợi ACK
+↓
+Trả về true/false
+
+Nó KHÔNG đợi robot chạy xong.
+
+ReceiveLoop chạy nền
+private void ProcessMessage(string msg)
+{
+    switch(msg)
+    {
+        case "RSP:ACK":
+            _ackWaiter?.TrySetResult(true);
+            break;
+
+        case "EVT:BUSY":
+            State = RobotState.Busy;
+            break;
+
+        case "EVT:DONE":
+            State = RobotState.Idle;
+            break;
+
+        case "EVT:ERROR":
+            State = RobotState.Error;
+            break;
+    }
+}
+Robot RAPID
+
+Robot nhận:
+
+CMD:HOME
+
+Robot trả ngay:
+
+SocketSend clientSocket \Str:="RSP:ACK\n";
+
+Sau đó:
+
+MoveJ pHome,v500,z50,tool0;
+
+Chạy xong:
+
+SocketSend clientSocket \Str:="EVT:DONE\n";
+Nếu muốn đợi robot chạy xong
+
+Tạo thêm:
+
+private TaskCompletionSource<bool> _doneWaiter;
+
+Nhận DONE:
+
+case "EVT:DONE":
+    _doneWaiter?.TrySetResult(true);
+    break;
+
+Hàm:
+
+public async Task<bool> WaitDoneAsync(int timeout = 30000)
+{
+    _doneWaiter = new TaskCompletionSource<bool>();
+
+    Task completed = await Task.WhenAny(
+        _doneWaiter.Task,
+        Task.Delay(timeout));
+
+    return completed == _doneWaiter.Task;
+}
+
+Sử dụng:
+
+bool ack = await robot.SendCommandAsync("CMD:HOME\n");
+
+if (!ack)
+    return;
+
+bool done = await robot.WaitDoneAsync();
+
+if (done)
+{
+    Console.WriteLine("Robot Home xong");
+}
+Trong máy thực tế mình thường làm
+
+Thay vì:
+
+await SendCommandAsync();
+await WaitDoneAsync();
+
+mình dùng state machine:
+
+Step 0
+    Send HOME
+
+Step 1
+    Chờ ACK
+
+Step 2
+    Chờ DONE
+
+Step 3
+    Send PICK
+
+Step 4
+    Chờ ACK
+
+Step 5
+    Chờ DONE
+
+ReceiveLoop chỉ cập nhật:
+
+RobotAck = true;
+RobotDone = true;
+RobotError = true;

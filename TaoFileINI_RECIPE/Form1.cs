@@ -25,6 +25,7 @@ namespace TaoFileINI_RECIPE
             ConfigManager.Load();
 
             LoadRecipeList();
+            LoadRecipeList2();
 
             string lastRecipe = ConfigManager.System.LastRecipe;
 
@@ -69,6 +70,28 @@ namespace TaoFileINI_RECIPE
 
             listBoxRecipe.DataSource = null;
             listBoxRecipe.DataSource = lstRecipe;
+            
+        }
+
+        private void LoadRecipeList2()
+        {
+            List<string> lst = new List<string>();
+            string recipeFolder = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "Recipe");
+
+            if (!Directory.Exists(recipeFolder))
+                Directory.CreateDirectory(recipeFolder);
+
+            lst.Clear();
+
+            foreach (string file in Directory.GetFiles(recipeFolder, "*.ini"))
+            {
+                lst.Add(Path.GetFileNameWithoutExtension(file));
+            }
+
+
+            cbRecipe.DataSource = lst;
         }
 
         private void LoadControl()
@@ -118,6 +141,7 @@ namespace TaoFileINI_RECIPE
             RecipeManager.SaveAs(recipeName);
 
             LoadRecipeList();
+            LoadRecipeList2();
 
             listBoxRecipe.SelectedItem = recipeName;
         }

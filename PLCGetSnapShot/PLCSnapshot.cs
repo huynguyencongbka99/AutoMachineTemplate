@@ -161,7 +161,14 @@ namespace PLCGetSnapShot
         {
             this._ip = ip;
             this._port = port;
-            Connect();
+            try
+            {
+                Connect();
+            }
+            catch(Exception)
+            {
+            }
+
         }
 
         public void Connect()
