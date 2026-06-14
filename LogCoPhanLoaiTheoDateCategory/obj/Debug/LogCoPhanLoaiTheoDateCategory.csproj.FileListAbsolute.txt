@@ -31,10 +31,10 @@ C:\Users\admin1\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\bin\Debug\LogCoPhanLoaiTheoDateCategory.exe.config
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\bin\Debug\LogCoPhanLoaiTheoDateCategory.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\bin\Debug\LogCoPhanLoaiTheoDateCategory.pdb
-C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.csproj.AssemblyReference.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.MainForm.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.Properties.Resources.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.csproj.GenerateResource.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.csproj.CoreCompileInputs.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.pdb
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\LogCoPhanLoaiTheoDateCategory\obj\Debug\LogCoPhanLoaiTheoDateCategory.csproj.AssemblyReference.cache

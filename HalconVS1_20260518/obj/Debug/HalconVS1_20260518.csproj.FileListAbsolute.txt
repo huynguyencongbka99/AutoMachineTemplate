@@ -36,3 +36,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\Ha
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.csproj.CopyComplete
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\obj\Debug\HalconVS1_20260518.pdb
+C:\Users\admin1\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS1_20260518\bin\Debug\halcondotnet.dll

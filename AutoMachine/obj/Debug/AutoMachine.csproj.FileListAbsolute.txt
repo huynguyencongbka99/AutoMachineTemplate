@@ -56,3 +56,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\AutoMachine\obj\Debug\AutoMachi
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\AutoMachine\obj\Debug\AutoMachine.csproj.CoreCompileInputs.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\AutoMachine\obj\Debug\AutoMachine.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\AutoMachine\obj\Debug\AutoMachine.pdb
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\AutoMachine\obj\Debug\AutoMachine.csproj.AssemblyReference.cache

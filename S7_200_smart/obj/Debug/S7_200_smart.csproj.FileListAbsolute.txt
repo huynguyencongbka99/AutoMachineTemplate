@@ -74,7 +74,6 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\bin\Debug\System.B
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\bin\Debug\System.Memory.xml
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\bin\Debug\System.Numerics.Vectors.xml
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
-C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.csproj.AssemblyReference.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.Form1.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.Properties.Resources.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.csproj.GenerateResource.cache
@@ -82,3 +81,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_s
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.csproj.CopyComplete
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.pdb
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\S7_200_smart\obj\Debug\S7_200_smart.csproj.AssemblyReference.cache

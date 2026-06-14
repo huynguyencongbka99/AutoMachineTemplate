@@ -10,15 +10,13 @@ namespace TaoFileINI_RECIPE
     public class Recipe
     {
         public string Name { get; set; }
+        public PlcConfig Plc { set; get; } = new PlcConfig();
 
-        public CameraConfig Camera { get; set; }
-            = new CameraConfig();
+        public CameraConfig Camera { get; set; } = new CameraConfig();
 
-        public VisionConfig Vision { get; set; }
-            = new VisionConfig();
+        public VisionConfig Vision { get; set; } = new VisionConfig();
 
-        public RobotConfig Robot { get; set; }
-            = new RobotConfig();
+        public RobotConfig Robot { get; set; } = new RobotConfig();
     }
 
 }

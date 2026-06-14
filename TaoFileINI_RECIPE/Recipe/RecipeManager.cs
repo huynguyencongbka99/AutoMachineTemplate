@@ -32,6 +32,24 @@ namespace TaoFileINI_RECIPE
                 Name = recipeName
             };
 
+            #region PLC Recipe
+            CurrentRecipe.Plc.IP = INI.Read(
+                        "PLC",
+                        "IP",
+                        path);
+            CurrentRecipe.Plc.Port = int.Parse(
+                         INI.Read(
+                             "PLC",
+                             "Port",
+                             path));
+            CurrentRecipe.Plc.Timeout = int.Parse(
+                        INI.Read(
+                            "PLC",
+                            "Timeout",
+                            path));
+            #endregion
+
+            #region Camera
             CurrentRecipe.Camera.Exposure =
                 double.Parse(
                     INI.Read(
@@ -51,7 +69,9 @@ namespace TaoFileINI_RECIPE
                     "CAMERA",
                     "TriggerMode",
                     path);
+            #endregion
 
+            #region Vision
             CurrentRecipe.Vision.Score =
                 double.Parse(
                     INI.Read(
@@ -72,6 +92,18 @@ namespace TaoFileINI_RECIPE
                         "VISION",
                         "AngleEnd",
                         path));
+            #endregion
+
+            #region Robot
+            CurrentRecipe.Robot.IP = INI.Read(
+                        "ROBOT",
+                        "IP",
+                        path);
+            CurrentRecipe.Robot.Port = int.Parse(
+                         INI.Read(
+                             "ROBOT",
+                             "Port",
+                             path));
 
             CurrentRecipe.Robot.Speed =
                 double.Parse(
@@ -88,6 +120,8 @@ namespace TaoFileINI_RECIPE
                         path));
         }
 
+        #endregion
+
         public static void Save()
         {
             if (CurrentRecipe == null)
@@ -97,6 +131,10 @@ namespace TaoFileINI_RECIPE
                 Path.Combine(
                     RecipeFolder,
                     $"{CurrentRecipe.Name}.ini");
+            INI.Write("PLC","IP",CurrentRecipe.Plc.IP.ToString(),path);
+            INI.Write("PLC", "Port", CurrentRecipe.Plc.Port.ToString(), path);
+            INI.Write("PLC", "Timeout", CurrentRecipe.Plc.Timeout.ToString(), path);
+
 
             INI.Write(
                 "CAMERA",
@@ -145,23 +183,27 @@ namespace TaoFileINI_RECIPE
                 "Accel",
                 CurrentRecipe.Robot.Accel.ToString(),
                 path);
+
+            INI.Write(
+                "ROBOT",
+                "IP",
+                CurrentRecipe.Robot.IP.ToString(),
+                path);
+
+            INI.Write(
+                "ROBOT",
+                "Port",
+                CurrentRecipe.Robot.Port.ToString(),
+                path);
         }
 
         public static void SaveAs(string recipeName)
         {
-            if (CurrentRecipe == null)
-                return;
-
-            string oldName =
-                CurrentRecipe.Name;
-
-            CurrentRecipe.Name =
-                recipeName;
-
+            if (CurrentRecipe == null) return;
+            string oldName = CurrentRecipe.Name;
+            CurrentRecipe.Name = recipeName;
             Save();
-
-            CurrentRecipe.Name =
-                oldName;
+            CurrentRecipe.Name = oldName;
         }
     }
 }

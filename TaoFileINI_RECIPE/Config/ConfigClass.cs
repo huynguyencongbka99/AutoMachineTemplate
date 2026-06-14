@@ -20,6 +20,8 @@ namespace TaoFileINI_RECIPE
 
     public class RobotConfig
     {
+        public string IP { set; get; }
+        public int Port { set; get; }
         public double Speed { get; set; }
         public double Accel { get; set; }
     }

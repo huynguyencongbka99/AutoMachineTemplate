@@ -34,6 +34,8 @@
             this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
             this.lstLogs = new System.Windows.Forms.ListBox();
             this.txtLogs = new System.Windows.Forms.RichTextBox();
+            this.btnSendRobot = new System.Windows.Forms.Button();
+            this.lstReceiveFromRobot = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // frmIO
@@ -68,11 +70,32 @@
             this.txtLogs.TabIndex = 5;
             this.txtLogs.Text = "";
             // 
+            // btnSendRobot
+            // 
+            this.btnSendRobot.Location = new System.Drawing.Point(12, 182);
+            this.btnSendRobot.Name = "btnSendRobot";
+            this.btnSendRobot.Size = new System.Drawing.Size(93, 37);
+            this.btnSendRobot.TabIndex = 6;
+            this.btnSendRobot.Text = "Send Robot";
+            this.btnSendRobot.UseVisualStyleBackColor = true;
+            this.btnSendRobot.Click += new System.EventHandler(this.btnSendRobot_Click);
+            // 
+            // lstReceiveFromRobot
+            // 
+            this.lstReceiveFromRobot.FormattingEnabled = true;
+            this.lstReceiveFromRobot.ItemHeight = 16;
+            this.lstReceiveFromRobot.Location = new System.Drawing.Point(12, 242);
+            this.lstReceiveFromRobot.Name = "lstReceiveFromRobot";
+            this.lstReceiveFromRobot.Size = new System.Drawing.Size(379, 164);
+            this.lstReceiveFromRobot.TabIndex = 7;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lstReceiveFromRobot);
+            this.Controls.Add(this.btnSendRobot);
             this.Controls.Add(this.txtLogs);
             this.Controls.Add(this.lstLogs);
             this.Controls.Add(this.frmIO);
@@ -91,6 +114,8 @@
         private System.IO.Ports.SerialPort serialPort1;
         private System.Windows.Forms.ListBox lstLogs;
         private System.Windows.Forms.RichTextBox txtLogs;
+        private System.Windows.Forms.Button btnSendRobot;
+        private System.Windows.Forms.ListBox lstReceiveFromRobot;
     }
 }
 

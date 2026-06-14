@@ -36,7 +36,7 @@ namespace PLCGetSnapShot
         
         void WriteD(int address, ushort value);
     }
-
+    #region PLC Delta
     /// <summary>
     /// Dùng với PLC Delta có cổng mạng
     /// </summary>
@@ -73,18 +73,13 @@ namespace PLCGetSnapShot
                 {
                     //đọc PLC thật
 
-
                     bool[] x = ReadX(1024, 8);
 
                     bool[] y = ReadY(1280, 4);
 
                     bool[] m = ReadM(2048, 4);
 
-                    //bool[] x = ReadX(0, 8);
 
-                    //bool[] y = ReadY(0, 4);
-
-                    //bool[] m = ReadM(8192, 4);
                     // 🔒 ghi dữ liệu (critical section NGẮN)
                     lock (_lock)
                     {
@@ -147,7 +142,8 @@ namespace PLCGetSnapShot
             _master.WriteSingleRegister((ushort)address, value);
         }
     }
-
+    #endregion
+    #region FX5U
     /// <summary>
     /// Dùng với PLC Fx5U
     /// </summary>
@@ -168,7 +164,6 @@ namespace PLCGetSnapShot
             catch(Exception)
             {
             }
-
         }
 
         public void Connect()
@@ -259,8 +254,9 @@ namespace PLCGetSnapShot
             _master.WriteSingleRegister((ushort)address, value);
         }
     }
-    
+    #endregion
 
+    #region PLC Xinjie
     /// <summary>
     /// For PLC Xinjie Serial Only
     /// </summary>
@@ -275,7 +271,6 @@ namespace PLCGetSnapShot
         public PLCServiceXinjie(SerialPort serialPort)
         {
             this.serialPort = serialPort;
-            //this.serialPort = _serialPort;
             ModbusConfig();
             OpenSerialPort();
         }
@@ -424,4 +419,5 @@ namespace PLCGetSnapShot
             _master.WriteMultipleCoils(slaveId, startAddress, data);
         }
     }
+    #endregion
 }

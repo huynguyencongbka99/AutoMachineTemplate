@@ -11,10 +11,10 @@ C:\Users\admin1\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\Ta
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\bin\Debug\TaoFileINI_RECIPE.exe.config
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\bin\Debug\TaoFileINI_RECIPE.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\bin\Debug\TaoFileINI_RECIPE.pdb
-C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.csproj.AssemblyReference.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.Form1.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.Properties.Resources.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.csproj.GenerateResource.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.csproj.CoreCompileInputs.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.pdb
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI_RECIPE\obj\Debug\TaoFileINI_RECIPE.csproj.AssemblyReference.cache

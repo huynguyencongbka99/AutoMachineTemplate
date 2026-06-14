@@ -15,15 +15,9 @@ namespace TaoFileINI_RECIPE
             private set;
         }
 
-        public static PlcConfig Plc
-        {
-            get;
-            private set;
-        }
+        public static readonly string ConfigFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Config");
 
-        public static readonly string ConfigFolder =Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Config");
-
-        public static readonly string InitPath =Path.Combine(ConfigFolder,"Initialize.ini");
+        public static readonly string InitPath = Path.Combine(ConfigFolder, "Initialize.ini");
 
         public static void Load()
         {
@@ -34,29 +28,6 @@ namespace TaoFileINI_RECIPE
                         "SYSTEM",
                         "LastRecipe",
                         InitPath)
-            };
-
-            Plc = new PlcConfig
-            {
-                IP =
-                    INI.Read(
-                        "PLC CONFIG",
-                        "IP",
-                        InitPath),
-
-                Port =
-                    int.Parse(
-                        INI.Read(
-                            "PLC CONFIG",
-                            "Port",
-                            InitPath)),
-
-                Timeout =
-                    int.Parse(
-                        INI.Read(
-                            "PLC CONFIG",
-                            "Timeout",
-                            InitPath))
             };
         }
 

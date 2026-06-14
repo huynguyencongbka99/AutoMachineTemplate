@@ -45,7 +45,6 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\PLCGet
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\PLCGetSnapShot.pdb
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\NModbus4.dll
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\bin\Debug\NModbus4.xml
-C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.AssemblyReference.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.MainForm.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.frmIO.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.Properties.Resources.resources
@@ -55,3 +54,5 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGet
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.pdb
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.ErrorForm.resources
+C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.csproj.AssemblyReference.cache
+C:\Users\admin1\Dropbox\3.Arcadyan\Cs\AutoMachine\PLCGetSnapShot\obj\Debug\PLCGetSnapShot.ErrorForm.resources

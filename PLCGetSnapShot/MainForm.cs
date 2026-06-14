@@ -39,7 +39,8 @@ namespace PLCGetSnapShot
             //robot
 
             _rbAbb = new ABBSocket();
-            // await _rbAbb.StartAsync("192.168.0.125", 5002);
+             await _rbAbb.StartAsync("127.0.0.1", 5000);
+            _rbAbb.MessageReceived += ReceiveDataRobot;
 
 
             
@@ -55,10 +56,6 @@ namespace PLCGetSnapShot
             {
                 MessageBox.Show(ex.Message);
             }
-
-           
-
-
         }
 
         private void Logger_OnLogReceived(LogItem item)
@@ -117,9 +114,8 @@ namespace PLCGetSnapShot
 
         private string ShowFormError(string s)
         {
+
             string str = "1111";
-            Invoke(new Action(() =>
-            {
                 ErrorForm frm = new ErrorForm(s);
                 frm.ShowDialog();
                 if (frm.DialogResult == DialogResult.OK)
@@ -128,8 +124,23 @@ namespace PLCGetSnapShot
                     str = "Cacel";
                 if (frm.DialogResult == DialogResult.Retry)
                     str = "Retry";
-            }));
             return str;
+        }
+
+        private async void btnSendRobot_Click(object sender, EventArgs e)
+        {
+            if (_rbAbb != null)
+                await _rbAbb.SendCommandAsync("Clicked Send async!");
+        }
+
+        private void ReceiveDataRobot(string str)
+        {
+            var dt = DateTime.Now.ToString();
+            Invoke(new Action(() =>
+            {
+                lstReceiveFromRobot.Items.Add(dt + ": " +str);
+                lstReceiveFromRobot.TopIndex = lstReceiveFromRobot.Items.Count - 1;
+            }));
         }
     }
 }

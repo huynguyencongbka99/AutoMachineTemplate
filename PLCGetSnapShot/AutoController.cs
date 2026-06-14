@@ -10,6 +10,7 @@ namespace PLCGetSnapShot
 {
     public class AutoController
     {
+        string str = "";
         public Func<string, string> ShowError;
         private readonly IPlcService _plc;
         private Step _step = Step._0_WaitTrigger;
@@ -35,37 +36,27 @@ namespace PLCGetSnapShot
                 switch (_step)
                 {
                     case Step._0_WaitTrigger:
-                        ShowError.Invoke("Have something Wrong! Confirm!");
-                        if (input.X != null && input.X.Length >0)
-                            if (input.X[0] == false)
-                            {
-                                _step = Step._5_inner;
-                                Logger.Log(LogCategory.PLC, "I am in PLC Wait Trigger!");
-
-                            }
+                        str = ShowError.Invoke("Have something Wrong! Confirm!");
+                        Logger.Log(LogCategory.PLC, "I am in PLC Wait Trigger!" + " click " + str);
                         _step = Step._5_inner;
                         break;
 
                     case Step._5_inner:
-                        ShowError.Invoke("Have something Wrong! Confirm!");
-                        if (input.X != null && input.X.Length > 0)
-                            _step = Step._15_TinhToan;
+                        str = ShowError.Invoke("Have something Wrong! Confirm!  ");
+                        Logger.Log(LogCategory.PLC, "I am in PLC Inner!"+ " click " + str);
                         _step = Step._15_TinhToan;
-                        Logger.Log(LogCategory.PLC, "I am in PLC Inner!");
                         break;
+
                     case Step._15_TinhToan:
-                        {
-                            snap = _rbAbb.GetSnapshot();
-
-                            if (snap.AlarmCode != 0)
-                            {
-                                ShowError.Invoke("Have something Wrong! Confirm!");
-                                _step = Step._0_WaitTrigger;
-                            }
+                        snap = _rbAbb.GetSnapshot();
+                        str = ShowError.Invoke("Have something Wrong! Confirm!");
+                        Logger.Log(LogCategory.PLC, "I am in Tinh Toan! " + " click " + str);
+                        if (str == "OK")
                             _step = Step._0_WaitTrigger;
-                        }
+                        else _step = Step._10_Capture;
                         break;
-
+                    case Step._10_Capture:
+                        break;
                 }
 
                 await Task.Delay(1000);

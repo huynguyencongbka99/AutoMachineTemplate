@@ -9,11 +9,12 @@ namespace PLCGetSnapShot
     #region ABB Socket
     public class ABBSocket
     {
+        #region Fields
         private readonly object _snapshotLock = new object();
 
         private RobotSnapshot _snapshot =new RobotSnapshot();
 
-        #region Fields
+        
 
         private string _ip;
         private int _port;
@@ -161,7 +162,7 @@ namespace PLCGetSnapShot
                             buffer,
                             0,
                             len);
-
+                    
                     ProcessMessage(msg.Trim());
                 }
             }
@@ -353,8 +354,7 @@ namespace PLCGetSnapShot
             }
         }
 
-        private async Task RegisterPollingLoop(
-    CancellationToken token)
+        private async Task RegisterPollingLoop(CancellationToken token)
         {
             while (!token.IsCancellationRequested)
             {
@@ -369,7 +369,7 @@ namespace PLCGetSnapShot
                     }
                 }
 
-                await Task.Delay(200, token);
+                await Task.Delay(500, token);
             }
         }
 
@@ -400,8 +400,8 @@ namespace PLCGetSnapShot
                     double.Parse(arr[6]);
             }
         }
-        #endregion
     }
+    #endregion
     #endregion
     #region Robot Enumstate
     public enum RobotState
@@ -432,8 +432,6 @@ namespace PLCGetSnapShot
         public double PosY { get; set; }
 
         public double PosZ { get; set; }
-
-
 
     }
     #endregion

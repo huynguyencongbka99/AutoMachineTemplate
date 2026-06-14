@@ -11,7 +11,6 @@ C:\Users\admin1\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\obj\Debug\TaoFileIN
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\bin\Debug\TaoFileINI.exe.config
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\bin\Debug\TaoFileINI.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\bin\Debug\TaoFileINI.pdb
-C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\obj\Debug\TaoFileINI.csproj.AssemblyReference.cache
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\obj\Debug\TaoFileINI.MainForm.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\obj\Debug\TaoFileINI.Properties.Resources.resources
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\TaoFileINI\obj\Debug\TaoFileINI.csproj.GenerateResource.cache

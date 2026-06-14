@@ -49,3 +49,4 @@ C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Debug\HalconVS2_202605120Calibration.csproj.CopyComplete
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Debug\HalconVS2_202605120Calibration.exe
 C:\Users\nguye\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\obj\Debug\HalconVS2_202605120Calibration.pdb
+C:\Users\admin1\Dropbox\3.Arcadyan\Cs\AutoMachine\HalconVS2_202605120Calibration\bin\Debug\halcondotnet.dll

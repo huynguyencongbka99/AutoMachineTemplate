@@ -30,16 +30,13 @@ namespace TaoFileINI_RECIPE
             string lastRecipe = ConfigManager.System.LastRecipe;
 
 
-            if (!string.IsNullOrWhiteSpace(
-                ConfigManager.System.LastRecipe))
+            if (!string.IsNullOrWhiteSpace(ConfigManager.System.LastRecipe))
             {
-                RecipeManager.Load(
-                    ConfigManager.System.LastRecipe);
+                RecipeManager.Load(ConfigManager.System.LastRecipe);
 
                 LoadControl();
 
-                listBoxRecipe.SelectedItem =
-                    ConfigManager.System.LastRecipe;
+                listBoxRecipe.SelectedItem = ConfigManager.System.LastRecipe;
             }
         }
 
@@ -96,8 +93,7 @@ namespace TaoFileINI_RECIPE
 
         private void LoadControl()
         {
-            if (RecipeManager.CurrentRecipe == null)
-                return;
+            if (RecipeManager.CurrentRecipe == null) return;
 
             txtExposure.Text =
                 RecipeManager.CurrentRecipe.Camera.Exposure.ToString();
