@@ -49,6 +49,7 @@ namespace PLCGetSnapShot
 
                     case Step._15_TinhToan:
                         snap = _rbAbb.GetSnapshot();
+                        
                         str = ShowError.Invoke("Have something Wrong! Confirm!");
                         Logger.Log(LogCategory.PLC, "I am in Tinh Toan! " + " click " + str);
                         if (str == "OK")

@@ -331,7 +331,6 @@ namespace PLCGetSnapShot
 
         #endregion
 
-
         #region SnapShot ABB Logic
         public RobotSnapshot GetSnapshot()
         {
@@ -403,6 +402,7 @@ namespace PLCGetSnapShot
     }
     #endregion
     #endregion
+
     #region Robot Enumstate
     public enum RobotState
     {
@@ -412,6 +412,7 @@ namespace PLCGetSnapShot
         Error
     }
     #endregion
+
     #region RobotSnapShot
     public class RobotSnapshot
     {

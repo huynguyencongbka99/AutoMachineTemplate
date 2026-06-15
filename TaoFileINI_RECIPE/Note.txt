@@ -2,3 +2,6 @@
 2. Cần phải hiểu rõ được cách thức hoạt động của config để có thể làm được template và tạo được Config Recipe cho các 
 dự án sau này. Không chồng chéo chức năng của nhau, đọc phải dễ hiểu về các Root và Business
 3. Xem cơ chế SaveAs trong Recipe manager
+
+
+

@@ -21,29 +21,23 @@ namespace PLCGetSnapShot
         public MainForm()
         {
             InitializeComponent();
-            Logger.OnLogReceived += Logger_OnLogReceived;
-
         }
         private async void Form1_Load(object sender, EventArgs e)
         {
-            
-            _iplcService = new PlcServiceDelta("192.168.0.11", 502);
-            
-            //_iplcService = new PlcServiceFX5U("192.168.0.10", 502);
+            Logger.OnLogReceived += Logger_OnLogReceived;
+
+            _iplcService = new PlcServiceDelta("192.168.0.11", 502);             //_iplcService = new PlcServiceFX5U("192.168.0.10", 502);
             _iplcService.Start();
 
-            
             serviceXinjie = new PLCServiceXinjie(serialPort1);
             serviceXinjie.Start();
+
             _frmIO = new frmIO(_iplcService, serviceXinjie);
-            //robot
 
             _rbAbb = new ABBSocket();
              await _rbAbb.StartAsync("127.0.0.1", 5000);
             _rbAbb.MessageReceived += ReceiveDataRobot;
 
-
-            
             _controller = new AutoController(_iplcService, _rbAbb);
             _controller.ShowError += ShowFormError;
 
@@ -57,6 +51,7 @@ namespace PLCGetSnapShot
                 MessageBox.Show(ex.Message);
             }
         }
+
 
         private void Logger_OnLogReceived(LogItem item)
         {
@@ -82,12 +77,9 @@ namespace PLCGetSnapShot
 
             _runtimeLogs.Enqueue(item);
 
-
             string line = item.ToString();
 
-
-            // scroll xuống cuối
-            
+            // scroll xuống cuối    
             lstLogs.Items.Add(line);
             lstLogs.TopIndex = lstLogs.Items.Count - 1;
 

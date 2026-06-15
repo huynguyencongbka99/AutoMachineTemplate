@@ -1,0 +1,4 @@
+﻿1. Chương trình Auto hiện tại chưa thực hiện được chức năng Robot lấy và sử dụng tín hiệu string từ hàm bên ngoài
+2. Các câu lệnh điều khiển robot hiện tại đang dùng string để giao tiếp với bên ngoài
+3. Trong Auto có thể tạo một hàm và đăng ký delegate trong Robot ABB Receive. Mỗi khi robot nhận thì một biến nào đó trong Auto sẽ thay đổi giá trị. 
+Sau khi thực hiện xong dữ liệu đó thì sẽ reset nó về trạng thái null. Như vậy vẫn đảm bảo dữ liệu truyền nhận trong class robot. Auto chỉ phát lệnh yêu cầu

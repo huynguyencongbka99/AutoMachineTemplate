@@ -19,8 +19,12 @@ namespace TaoFileINI_RECIPE
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
+        {
+            InitializeConfigRecipe();
+        }
+
+        public void InitializeConfigRecipe()
         {
             ConfigManager.Load();
 
@@ -28,7 +32,6 @@ namespace TaoFileINI_RECIPE
             LoadRecipeList2();
 
             string lastRecipe = ConfigManager.System.LastRecipe;
-
 
             if (!string.IsNullOrWhiteSpace(ConfigManager.System.LastRecipe))
             {
@@ -49,12 +52,9 @@ namespace TaoFileINI_RECIPE
 
         private void LoadRecipeList()
         {
-            string recipeFolder = Path.Combine(
-                AppDomain.CurrentDomain.BaseDirectory,
-                "Recipe");
+            string recipeFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,"Recipe");
 
-            if (!Directory.Exists(recipeFolder))
-                Directory.CreateDirectory(recipeFolder);
+            if (!Directory.Exists(recipeFolder)) Directory.CreateDirectory(recipeFolder);
 
             lstRecipe.Clear();
 
@@ -111,8 +111,7 @@ namespace TaoFileINI_RECIPE
             if (listBoxRecipe.SelectedItem == null)
                 return;
 
-            string recipeName =
-                listBoxRecipe.SelectedItem.ToString();
+            string recipeName = listBoxRecipe.SelectedItem.ToString();
 
             RecipeManager.Load(recipeName);
 

@@ -15,10 +15,7 @@ namespace TaoFileINI_RECIPE
             private set;
         }
 
-        public static readonly string RecipeFolder =
-            Path.Combine(
-                AppDomain.CurrentDomain.BaseDirectory,
-                "Recipe");
+        public static readonly string RecipeFolder = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Recipe");
 
         public static void Load(string recipeName)
         {
@@ -131,6 +128,7 @@ namespace TaoFileINI_RECIPE
                 Path.Combine(
                     RecipeFolder,
                     $"{CurrentRecipe.Name}.ini");
+
             INI.Write("PLC","IP",CurrentRecipe.Plc.IP.ToString(),path);
             INI.Write("PLC", "Port", CurrentRecipe.Plc.Port.ToString(), path);
             INI.Write("PLC", "Timeout", CurrentRecipe.Plc.Timeout.ToString(), path);
